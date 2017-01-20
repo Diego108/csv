@@ -14,7 +14,7 @@ public class ReadCSV {
 	
 	public List<String> readFile(){
 		try {
-			br = new BufferedReader(new FileReader("/home/web6600/workspace/CVS/vip_bloqueio.csv"));
+			br = new BufferedReader(new FileReader("/home/web6600/Desktop/vip_bloqueio.csv"));
 			String arq;
 			List<String> lista = new ArrayList<>();
 			
@@ -32,13 +32,12 @@ public class ReadCSV {
 	}
 	
 	public void parseFile(){
-		List<String> lista = readFile();
 		
-		for (int i = 0; i < lista.size(); i++) {
-			
-			String nome = lista.get(i).split(";")[i];
-			
-			System.out.println(nome);
+		List<String> lista = readFile();
+		for(int l = 0; l <= lista.size(); l++){
+			for(int i = 0; i < l; i++){
+				
+			System.out.println(lista.get(l).split(";")[i]);
 		}
 	}
-}
+}}
